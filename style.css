@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+}
+
+.header {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+}
+
+.enlace {
+	color: white;
+}
+
+.footer {
+	padding: 10px;
+}
+
+#header {
+	background-color: blueviolet;
+}
+
+#main {
+	margin: 10px;
+}
