@@ -25,3 +25,26 @@ body {
 #main {
 	margin: 10px;
 }
+
+.input {
+	background-color: transparent;
+	width: 100%;
+	padding: 0.5rem;
+	border-width: 0px;
+	border-bottom-width: 2px;
+	border-bottom-color: #e5e7eb;
+}
+
+.input:focus {
+	outline: none;
+	border-bottom-color: #000;
+}
+
+.button {
+	width: 100%;
+	background-color: #000;
+	color: white;
+	border: 0;
+	cursor: pointer;
+	padding: 5px 10px;
+}
