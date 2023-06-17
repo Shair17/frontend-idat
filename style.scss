@@ -1,7 +1,88 @@
 $color-fondo: #000;
 $color-texto: #fff;
+$tam-fuente: 35px;
+$color-primario: #091A7A;
+$color-secundario: #3366FF;
+$color-container: #D6E4FF;
+$redondeo: 10px;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@mixin button($background-color, $text-color) {
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: $background-color;
+  color: $text-color;
+  border-radius: $redondeo;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: darken($background-color, 20%);
+  }
+}
 
 body {
   background-color: $color-fondo;
   color: $color-texto;
 }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+  background-color: $color-container;
+  border-radius: $redondeo;
+  padding: 20px;
+
+  h1 {
+    font-size: $tam-fuente;
+    color: $color-primario
+  }
+
+  p {
+    font-size: $tam-fuente;
+    color: $color-secundario;
+  }
+}
+
+.btn-primary {
+  @include button(#F3FBCB, #375901);
+}
+
+.btn-secondary {
+  @include button(#CDFEF5, #014276);
+}
+
+.btn-thrid {
+  @include button(#FFF5DA, #7A380E);
+}
+
+/**
+Hackaton:
+- Hacer uso de los mixins para hacer más componentes como los botones ya creados, por ejemplo:
+
+* input con diferentes estilos en base a parametros
+* pueden hacer sus botones más personalizados
+* crear una clase de un formulario para darle distintos estilos en base a los parametros
+
+- los estilos a libre imaginación
+*/
