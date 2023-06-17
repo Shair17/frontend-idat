@@ -2,73 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hola Mundo</title>
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="style.css" />
+		<title>Vite App</title>
 	</head>
 	<body>
-		<header class="header hola">
-			<div>Logo</div>
-
-			<nav>
-				<a href="/" class="enlace">Inicio</a>
-				<a href="sobre-mi.html" class="enlace">Sobre mi</a>
-				<a href="proyectos.html" class="enlace">Proyectos</a>
-			</nav>
-
-			<button>Iniciar sesión</button>
-		</header>
-		<main class="formulario-contenedor">
-			<form
-				id="formulario"
-				style="
-					position: relative;
-					display: flex;
-					gap: 1rem;
-					flex-direction: column;
-					max-width: 300px;
-					background-color: #ccc;
-				"
-			>
-				<input
-					class="input"
-					type="text"
-					name="name"
-					id="name"
-					placeholder="Ingresa tus nombres y apellidos"
-					maxlength="30"
-					minlength="4"
-					required
-				/>
-				<input
-					class="input"
-					type="email"
-					name="email"
-					id="email"
-					placeholder="Ingresa tu correo electrónico"
-					minlength="10"
-					required
-				/>
-				<input
-					class="input"
-					type="tel"
-					id="tel"
-					placeholder="Ingresa tu número de celular"
-					minlength="9"
-					maxlength="9"
-					required
-				/>
-
-				<button type="submit" class="button">Enviar</button>
-			</form>
-		</main>
-		<div class="caja">caja</div>
-		<footer class="footer" id="footer">
-			<center>IDAT 2023</center>
-		</footer>
-
-		<script src="app.js"></script>
+		<div id="app">
+			<h1>Hola Mundo desde IDAT</h1>
+		</div>
+		<script type="module" src="/main.js"></script>
 	</body>
 </html>
