@@ -1,3 +1,5 @@
+import './style.css';
+
 let institucion = 'IDAT';
 let nombre = 'Carlos';
 const edad = 15;
