@@ -1,67 +1,25 @@
 import './style.css';
 
-class Producto {
-	constructor(
-		imagen,
-		precio,
-		precioAnterior,
-		cantidadVendidos,
-		calificacion,
-		titulo,
-		tieneEnvioGratis
-	) {
-		this.imagen = imagen;
-		this.precio = precio;
-		this.precioAnterior = precioAnterior;
-		this.cantidadVendidos = cantidadVendidos;
-		this.calificacion = calificacion;
-		this.titulo = titulo;
-		this.tieneEnvioGratis = tieneEnvioGratis;
-	}
-
-	obtenerResumen() {
-		return {
-			imagen: this.imagen,
-			precio: this.precio,
-			precioAnterior: this.precioAnterior,
-			cantidadVendidos: this.cantidadVendidos,
-			calificacion: this.calificacion,
-			titulo: this.titulo,
-			tieneEnvioGratis: this.tieneEnvioGratis,
-		};
-	}
-
-	modificarImagen(nuevaImagen) {
-		this.imagen = nuevaImagen;
-	}
-
-	modificarPrecio(nuevoPrecio) {
-		this.precioAnterior = this.precio;
-		this.precio = nuevoPrecio;
-	}
-
-	aumentarCantidadVendidos() {
-		this.cantidadVendidos = this.cantidadVendidos + 1;
-	}
-
-	modificarTitulo(nuevoTitulo) {
-		this.titulo = nuevoTitulo;
-	}
-
-	modificarTipoDeEnvio() {
-		this.tieneEnvioGratis = !this.tieneEnvioGratis;
-	}
+function $(elemento) {
+	return document.querySelector(elemento);
 }
 
-const producto = new Producto(
-	'https://picsum.photos/400',
-	6.99,
-	12.99,
-	500,
-	4.8,
-	'Gafas de sol modernas para usarlas en la playa con protección contra rayos UV',
-	false
-);
+const containerPersonajes = $('#containerPersonajes');
+
+// async - await
+async function llamarApi() {
+	const respuesta = await fetch('https://rickandmortyapi.com/api/character');
+	const datos = await respuesta.json();
+
+	return datos.results;
+}
+
+llamarApi().then((personajes) => {
+	// pintar los datos de la api en pantalla
+	// usar el id #containerPersonajes
+	// usar la constante ´containerPersonajes´
+	// ...
+});
 
 //
 const productos = [
@@ -322,11 +280,7 @@ const productos = [
 	],
 ];
 
-function $(elemento) {
-	return document.querySelector(elemento);
-}
-
-const container = $('.container');
+const container = $('#containerProductos');
 
 function construirGrilla() {
 	let resultado = '';
