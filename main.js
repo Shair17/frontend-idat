@@ -94,13 +94,15 @@ let button = $('#mostrar_tareas');
 
 button.addEventListener('click', () => {
 	const tareas = JSON.parse(obtenerDatosDelLocalStorage(key));
-	let html;
+	let html = '';
 
 	tareas.map(({ titulo, descripcion, completado, fecha }, key) => {
 		html += `<div>
 		<h1>${titulo}</h1>
 		<p>${descripcion}</p>
-		<span>${completado ? 'Completado' : 'No completado'}</span>
+		<span style="color:${completado ? 'green' : 'red'}">${
+			completado ? 'Completado' : 'No completado'
+		}</span>
 		<p>${fecha}</p>
 		</div>`;
 	});
