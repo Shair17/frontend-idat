@@ -1,5 +1,6 @@
 import './style.css';
 
+// elemento -> .elemento o #elemento
 function $(elemento) {
 	return document.querySelector(elemento);
 }
@@ -24,22 +25,21 @@ function obtenerDatosDelLocalStorage(key) {
 function eliminarDatosDelLocalStorage(key) {
 	return window.localStorage.removeItem(key);
 }
+//
+//
+//
+//
+//
+// Modificar el texto del H1
+let h1 = $('#hola_mundo');
+let button = $('#cambiar_texto');
 
-const key = 'numero';
+button.addEventListener('click', () => {
+	let texto = h1.innerText;
 
-limpiarLocalStorage();
-
-const stringify = JSON.stringify({
-	nombre: 'Juan',
-	edad: 20,
-	instituto: 'IDAT',
+	if (texto === 'Hola Mundo') {
+		h1.innerText = 'Adiós Mundo';
+	} else {
+		h1.innerText = 'Hola Mundo';
+	}
 });
-
-guardarDatosEnElLocalStorage(key, stringify);
-
-console.log('ahora si está');
-console.log(JSON.parse(obtenerDatosDelLocalStorage(key)));
-
-console.log('ahora no está');
-eliminarDatosDelLocalStorage(key);
-console.log(JSON.parse(obtenerDatosDelLocalStorage(key)));
