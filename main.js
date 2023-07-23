@@ -43,3 +43,21 @@ button.addEventListener('click', () => {
 		h1.innerText = 'Hola Mundo';
 	}
 });
+
+// Aquí empieza la hackaton semana 11
+
+// Desarrollar una lista de tareas con Storage, DOM y eventos
+// En el storage tiene que almacenar la lista de tareas con el siguiente formato
+
+// Tarea:
+// 	- id (numero o texto)
+//	- titulo (texto)
+//	- descripcion (texto)
+//	- completado (boolean)
+//	- fecha (Date)
+
+// Teniendo en cuenta que son varias tareas entonces deben almacenar un arreglo
+// Recuerden el uso de JSON.stringify y JSON.parse (les será muy útil)
+
+// Respecto al DOM lo usarán para pintar la lista de tareas en pantalla
+// Respecto a eventos, analicen que eventos tienen que usar y apliquenlo
