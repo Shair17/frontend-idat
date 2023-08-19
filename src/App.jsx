@@ -1,29 +1,32 @@
-import { useState } from 'react';
-
-function App() {
-	const [count, setCount] = useState(0);
-
-	const incrementar = () => {
-		setCount(count + 1);
-	};
-
-	const decrementar = () => {
-		setCount(count - 1);
-	};
-
-	const resetear = () => {
-		setCount(0);
-	};
-
+// Un componente de React (no transpilado) JSX
+export default function App() {
 	return (
 		<div>
-			<h1>Contador {count}</h1>
+			<h1>hola mundo</h1>
+			<p>esto es un mensaje</p>
 
-			<button onClick={incrementar}>Incrementar</button>
-			<button onClick={decrementar}>Decrementar</button>
-			<button onClick={resetear}>Resetear</button>
+			<input type="text" placeholder="escribe algo aquí" />
+
+			<button>Clickeame</button>
 		</div>
 	);
 }
 
-export default App;
+/** Así es como se verá el código de arriba una vez que se entregue al navegador */
+
+// Un componente de React pero transpilado (convertido a js para que el navegador lo entienda)
+/*
+export default function App() {
+	return React.createElement(
+		 'div',
+		null,
+		 React.createElement('h1', null, 'hola mundo'),
+		React.createElement('p', null, 'esto es un mensaje'),
+		 React.createElement('input', {
+			type: 'text',
+			placeholder: 'escribe algo aqu\xED',
+		}),
+		React.createElement('button', null, 'Clickeame')
+	);
+}
+*/
