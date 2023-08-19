@@ -1,13 +1,14 @@
+import { Perfil } from './components/Perfil';
+
 // Un componente de React (no transpilado) JSX
 export default function App() {
 	return (
 		<div>
-			<h1>hola mundo</h1>
-			<p>esto es un mensaje</p>
-
-			<input type="text" placeholder="escribe algo aquí" />
-
-			<button>Clickeame</button>
+			<Perfil nombre="Juan Perez" />
+			<Perfil nombre="Camilo Vallarta" />
+			<Perfil nombre="Sebastian Ascoy" />
+			<Perfil nombre="Juan Carlos" />
+			<Perfil nombre="Alejandra Goicochea" />
 		</div>
 	);
 }
