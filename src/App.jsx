@@ -2,7 +2,7 @@ import { Perfil } from './components/Perfil';
 
 // Hackaton
 // 1. Hacer un contador con botones de incremento, decremento, reseteo y multiplicar por 2
-// 2. Lista de tareas (titulo, descripcion, estado: completado, pendiente) y debería de poder eliminarse una tarea con un botón
+// 2. Lista de tareas (titulo, descripcion, estado: completado, pendiente) y debería de poder eliminarse una tarea con un botón (solamente esa tarea)
 // 3. Hacer un reloj (usar tipo de dato Date), usar useState y useEffect. Hacer que cada 1 segundo se actualice la fecha. Debe mostrarse con el siguiente formato: 06:46:15 (horas:minutos:segundos)
 
 // Un componente de React (no transpilado) JSX
