@@ -9,3 +9,9 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
+
+.perfil-contenedor {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
