@@ -12,6 +12,8 @@ export default function App() {
 	);
 }
 
+// página para que puedan ver el código transpilado: https://babeljs.io/repl
+
 /** Así es como se verá el código de arriba una vez que se entregue al navegador */
 
 // Un componente de React pero transpilado (convertido a js para que el navegador lo entienda)
