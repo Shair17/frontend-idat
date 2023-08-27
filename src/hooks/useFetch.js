@@ -11,11 +11,11 @@ export const useFetch = (url = '', options = {}) => {
 		const fetchData = async () => {
 			if (!isMounted) return;
 
+			// intenta esto...
 			try {
 				const response = await fetch(url, options);
 
 				if (!response.ok) {
-					setError(error);
 					setIsLoading(false);
 					throw new Error('Ocurrió un error en la petición');
 				}
@@ -25,9 +25,11 @@ export const useFetch = (url = '', options = {}) => {
 				setData(data);
 				setIsLoading(false);
 			} catch (error) {
+				// por si todo falla haz esto...
 				setError(error);
 				setIsLoading(false);
 			} finally {
+				// haz esto sí o sí
 				setIsLoading(false);
 			}
 		};
